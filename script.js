@@ -1,11 +1,29 @@
 
+const tasks= [];
 
-
-function addPara(){
-    const vvval=document.getElementById('search').value;
-    const para = document.createElement("p");
-    const node = document.createTextNode(vvval);
-    para.appendChild(node);
-    const element = document.getElementById("div1");
-    element.appendChild(para);
+function addText(){
+    const task= document.getElementById("inputTask").value;
+    if(task.length==0){
+        return;
+    }
+    tasks.push(task);
+    renderTask();
 }
+function renderTask(){
+    let node= "";
+    tasks.forEach((elem, index) => {
+        node += `
+        <div class="task">
+        <p>${elem}</p>
+        <button index= "${index}"onclick="removeTask(${index})"></button>
+        </div>
+        `;
+      });
+      const containor=document.getElementById("taskBox");
+      containor.innerHTML=node;
+  }
+  function removeTask(index){
+    tasks.splice(index,1);
+    renderTask();
+
+  }
