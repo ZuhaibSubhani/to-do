@@ -15,7 +15,7 @@ function renderTask(){
         node += `
         <div class="task">
         <p>${elem}</p>
-        <button index= "${index}"onclick="removeTask(${index})"></button>
+        <button index= "${index}"onclick="removeTask(${index})">DEL</button>
         </div>
         `;
       });

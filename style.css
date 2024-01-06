@@ -1,16 +1,60 @@
-h1{
-    text-align: center;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    
 }
-div{
-    margin-left: auto;
-    margin-right: auto;
-}
-#sea{
-    margin-left: auto;
-    margin-right: auto;
 
+.container {
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#sea {
+    
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
-#div1{
+
+
+
+#inputTask {
+    padding: 8px;
+    
+}
+
+#btn {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#taskBox {
     text-align: center;
+    margin-top: 20px;
+ /* Limit the width of the task container */
+}
+
+.task {
+    background-color: #fff;
+    padding: 5px;
+    margin: 10px 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #ff6347;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
 }
